@@ -1,0 +1,11 @@
+import java.util.*;
+class Solution {
+    public int thirdMax(int[] nums) {
+        Arrays.sort(nums);
+        int[] unique=Arrays.stream(nums).distinct().toArray();
+        if(unique.length<3){
+            return unique[unique.length-1];
+        }
+        return unique[unique.length-3];
+    }
+}
